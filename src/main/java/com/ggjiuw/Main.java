@@ -47,6 +47,5 @@ public class Main {
                 System.out.println("UNKNOWN COMMAND: '" + userChoice + "'");
             }
         }
-
     }
 }

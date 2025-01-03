@@ -1,6 +1,5 @@
 package com.ggjiuw;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
@@ -8,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 public class PersonStorage {
@@ -32,7 +30,7 @@ public class PersonStorage {
         return map.writeValueAsString(persons);
     }
 
-    public static boolean remove(String by_name) throws IOException {
+    public static boolean remove(String by_name) {
         if (persons.isEmpty()) {
             return false;
         }
@@ -57,8 +55,6 @@ public class PersonStorage {
 
         return null;
     }
-
-
 
     private static void save() throws IOException {
         ObjectMapper map = new ObjectMapper();
