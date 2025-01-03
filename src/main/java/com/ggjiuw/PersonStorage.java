@@ -20,9 +20,14 @@ public class PersonStorage {
         }
     } // IDEA зробила
 
-    public static void add(Person person) throws IOException {
+    public static boolean add(Person person) throws IOException {
+        if (find(person.getName()) != null) {
+            return false;
+        }
+
         persons.add(person);
         save();
+        return true;
     }
 
     public static String getJson() throws IOException {
