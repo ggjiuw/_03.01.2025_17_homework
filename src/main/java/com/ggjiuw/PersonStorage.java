@@ -41,6 +41,7 @@ public class PersonStorage {
 
         if (data != null) {
             persons.remove(Integer.parseInt(data[0]));
+            return true;
         }
 
         return false;
