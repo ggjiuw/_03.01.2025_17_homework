@@ -22,7 +22,9 @@ public class Main {
                 System.out.print("Enter new Person age: ");
                 int age = scanner.nextInt();
 
-                PersonStorage.add(new Person(name, age));
+                if (!(add(new Person(name, age)))) {
+                    System.out.println("Person with name '" + name + "' already exists");
+                }
             } else if (userChoice.equals("remove")) {
                 System.out.print("Enter Person name to remove: ");
                 String name = scanner.next();
