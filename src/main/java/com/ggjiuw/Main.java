@@ -41,6 +41,8 @@ public class Main {
                 String[] data = find(name);
                 if (data != null) {
                     System.out.println("Person {\n\tname: '" + data[1] + "'\n\tage: " + data[2] + "\n}");
+                } else {
+                    System.out.println("Cannot find Person with name '" + name + "'");
                 }
             } else if (userChoice.equals("quit")) {
                 System.out.println("byeeee");
