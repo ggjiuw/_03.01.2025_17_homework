@@ -67,9 +67,6 @@ public class PersonStorage {
 
         Path json_path = Paths.get("persons.json");
 
-        if (!(Files.exists(json_path)))
-            Files.createFile(json_path);
-
         try {
             Files.write(json_path, line.getBytes());
         } catch (IOException e) {
